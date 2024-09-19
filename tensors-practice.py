@@ -19,14 +19,29 @@ def getVector() -> None:
   print('Notice the number of dimensions of the vector when we call the "ndim" function against it: ' + vector.ndim)
 
 def getMatrix() -> None:
-  #Prints out some details about a Vector
+  #Prints out some details about a Matrix
   print('This is a Matrix. A Matrix is a 2-Dimensional Tensor')
   matrix = tf.constant([[1, 2], [3, 4]])
   matrix
   print('Notice the number of dimensions of the matrix when we call the "ndim" function against it: ' + matrix.ndim)
 
+def getTensor() -> None:
+  #Prints out some details about a Tensor
+  print('This is a Tensor. A Tensor is a n-Dimensional Tensor')
+  tensor = tf.constant([
+                        [[1, 2], [3, 4]],
+                        [[5, 6], [7, 8]],
+                        [[9, 10], [11, 12]]
+                       ])
+  tensor
+  print('Notice the number of dimensions of the tensor when we call the "ndim" function against it: ' + tensor.ndim)
+
 def main() -> None:
   getVersion()
   getScalar()
   getVector()
+  getMatrix()
+  getTensor()
   
+if __name__ == '__main__':
+  main()
